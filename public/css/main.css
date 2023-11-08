@@ -1,0 +1,455 @@
+/* CRETEAD BY PHILIP DROUBI */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Orbitron:wght@400;500;600;700;800;900&family=Outfit:wght@400;700&family=Raleway:wght@400;700&family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --font-size: 16px;
+    --body-background-color: #f1f1f1;
+    --navBar-color: rgb(34, 42, 53);
+    --nice-cyan: #29a5ed;
+    --whitesmoke: rgba(245, 245, 245, 0.808);
+    --main-padding-top: 60px;
+    --orangered: rgb(255, 69, 0);
+    --orange: orange;
+    --semi-light-blue: #17255A;
+    --dark-blue: #000C66;
+    --blue-color-hover: #14a5ce;
+    --lite-cyan: #08fdd8;
+    --blued-cyan-color: #08b8fd;
+    --margin: 80px;
+}
+
+/* Start global rules */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1000;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* XLarge */
+@media (min-width: 1400px) {
+    .container {
+        width: 1350px;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffff98;
+    border-radius: 4px;
+    box-shadow: inset 2px 0 2px 0 rgba(0, 0, 0, 0.233),
+        inset -2px 0 2px 0 rgba(0, 0, 0, 0.233);
+}
+
+body::-webkit-scrollbar-track {
+    background-image: linear-gradient(180deg, var(--nice-cyan), rgb(136, 0, 118));
+    box-shadow: inset 1px 0 2px 0 rgba(0, 0, 0, 0.233),
+        inset -1px 0 2px 0 rgba(0, 0, 0, 0.233);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.relative {
+    position: relative;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: var(--font-size);
+    min-height: 100vh;
+    padding-top: 60px;
+    background-color: var(--semi-light-blue);
+}
+
+body::-webkit-scrollbar:horizontal {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+}
+
+.section {
+    padding: var(--main-padding-top) 0;
+}
+
+.dis-inline-block {
+    display: inline-block;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+}
+
+.msg-btn .loading {
+    text-align: center;
+    margin: auto;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border-bottom: 2px dashed white;
+    border-right: 3px dashed white;
+    border-top: 2px dotted white;
+    border-left: 2px solid transparent;
+    animation-name: rotate;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.notifi-box {
+    position: fixed;
+    letter-spacing: 0.01px;
+    padding: 14px 0;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    min-width: fit-content;
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 500px;
+    transition: 0.4s;
+    z-index: 1000;
+}
+
+.correct {
+    color: #155724;
+    background-color: #bbf7ef;
+    border: 2px solid rgb(16, 105, 16);
+}
+
+.error {
+    color: red;
+    background-color: #ffc0cbe8;
+    border: 2px solid red;
+}
+
+.error-input-message {
+    color: rgb(255, 106, 106);
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 96%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #bbb;
+    padding: 8px;
+    /* text-wrap: nowrap; */
+}
+
+th.options {
+    max-width: 120px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff96;
+}
+
+button.add {
+    position: relative;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: larger;
+    border: 2px solid blue;
+    background-color: #206efd;
+    color: var(--right-section-background);
+    transition: 0.2s;
+    box-shadow: 0 0 9px 2px #0000ff6e;
+    z-index: 100;
+}
+
+button.add:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 9px 2px #0000ff9a;
+}
+
+button.add::after {
+    content: attr(data-text);
+    background-color: #222;
+    position: absolute;
+    width: 140px;
+    left: 200px;
+    bottom: -20px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 20px;
+    border-top-right-radius: 2px;
+    transition: 0.3s;
+}
+
+button.add:hover::after {
+    transform: scale(1);
+    left: -155px;
+}
+
+.alertTF {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    color: #222;
+    width: 86%;
+    max-width: 380px;
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 8px;
+    border: 4px solid #444;
+    z-index: 1200;
+}
+
+.alertTF h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgb(255, 133, 32);
+    text-transform: capitalize;
+    width: fit-content;
+}
+
+.alertTF p {
+    margin: 10px 0;
+}
+
+.alertTF .buttons {
+    margin-top: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.alertTF button {
+    width: 60px;
+    height: 38px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.18s;
+}
+
+.alertTF button.yes {
+    background-color: #65f386;
+    color: #002408;
+}
+
+.alertTF button.no {
+    background-color: #f36565;
+    color: #240000;
+}
+
+@media (hover:hover) {
+    .alertTF button:hover {
+        filter: brightness(1.1);
+        transform: scale(1.15);
+    }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/* new */
+.toast {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    border-radius: 6px;
+    max-width: 370px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    z-index: 5000;
+}
+
+.toast.active {
+    transform: translateX(0%);
+}
+
+.toast .toast-content {
+    display: flex;
+    align-items: center;
+}
+
+.toast .left-icon {
+    display: flex;
+    align-items: center;
+    align-self: start;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast-content .check {
+    background-color: #4070f4;
+}
+
+.toast-content .fail {
+    background-color: #f44040;
+}
+
+.toast-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.message .text.text-1 {
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+.toast .close:hover {
+    opacity: 1;
+}
+
+.toast .progress-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.toast .progress-line:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.toast .progress-line.success:before {
+    background-color: #4070f4;
+}
+
+.toast .progress-line.fail:before {
+    background-color: #f44040;
+}
+
+.progress-line.active:before {
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}

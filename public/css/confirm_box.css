@@ -1,0 +1,82 @@
+.confirmation-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 440px;
+    min-width: 270px;
+    background-color: #eee;
+    z-index: 1000;
+    border-radius: 8px;
+    border: 2px solid #333;
+    padding: 16px 12px !important;
+}
+
+.confirmation-box .title {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.confirmation-box .message {
+    margin: 14px 0 20px;
+}
+
+.confirmation-box .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+
+.confirmation-box .buttons button {
+    padding: 6px 12px;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.confirmation-box .buttons button:hover {
+    padding: 6px 18px;
+}
+
+.confirmation-box .buttons .red {
+    background-color: #d9534f;
+    color: white;
+}
+
+.confirmation-box .buttons .red:hover {
+    background-color: #da3f39;
+}
+
+.confirmation-box .buttons .green {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.confirmation-box .buttons .confirm {
+    margin-right: 20px;
+}
+
+.confirmation-box .buttons .green:hover {
+    background-color: #3ead3e;
+}
+
+.confirmation-box .buttons .blue {
+    background-color: rgb(73, 154, 230);
+    color: white;
+}
+
+.confirmation-box .buttons .blue:hover {
+    background-color: rgb(68, 144, 214);
+}
+
+.dark-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+}
